@@ -14,11 +14,11 @@ autopic.save_model(model)
 #to load a model use:
 topic_model = autopic.load_model()
 
-#Now we are ready to use our model to classify topics
+#Now we are ready to use our model to classify topics.
 #Here we use the embeddings as a parameter to identify predefined topics, so we will need to define some topics
 #according this structure:
 
-#Topics are defined using keywords, if a sentence don't fit a predefined topic than topic will be classified as 'Altro'
+#Topics are defined using keywords, if a sentence don't fit a predefined topic than will be classified as 'Altro'
 t_sicurezza = ["rapina","furto","omicidio","uccisione","violenza","arresto", "denuncia", "carcere"]
 t_qvita = ["urbano", "mangiare", "shopping", "servizi", "trasporti", "scuole", "ospedali", "viabilità", "traffico", "prezzo", "costo"]
 t_ambiente = ["smog", "inquinamento", "natura", "bosco", "oasi", "parco", "spiaggia", "montagna", "ambiente", "meteo", "contagi", "epidemia", "immondizia" ,"salute"]
