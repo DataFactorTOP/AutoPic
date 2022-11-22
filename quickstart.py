@@ -42,16 +42,24 @@ sentence = "Diagnosticati casi positivi in una RSA a Sciacca."
 r = autopic.get_topic(sentence, topics_names, topic_model)
 print(sentence, r[0])
 
-#Example 2: 
+#>> Diagnosticati casi positivi in una RSA a Sciacca. [0.9442093372344971, 'Ambiente e salute']
+
+
+#Example 2: Misclassification
 sentence = "La partita di ieri è stata bruttissima. I giocatori non si reggevano in piedi"
 r = autopic.get_topic(sentence, topics_names, topic_model)
 print(sentence, r[0])
 
-#Example 3: for a higher precision we can overwrite default values of alpha, beta and gamma params. 
-# defalut values are: alpha = 0.75, beta (must be < alpha) = 0.65 and gamma = 0.75.  
+#>> La partita di ieri è stata bruttissima. I giocatori non si reggevano in piedi [0.8745874166488647, 'Qualità della vita e servizi']
+
+
+#Example 3: For a higher precision we can overwrite default values of alpha, beta and gamma params increasing the classification thresold, 
+# but this will lower the recall. Defalut values are: alpha = 0.75, beta (must be < alpha) = 0.65 and gamma = 0.75.  
 sentence = "La partita di ieri è stata bruttissima. I giocatori non si reggevano in piedi"
 r = autopic.get_topic(sentence, topics_names, topic_model, alpha = 0.98, beta = 0.9, gamma = 0.95)
 print(sentence, r[0])
+
+#>> La partita di ieri è stata bruttissima. I giocatori non si reggevano in piedi [0.4756906032562256, 'Altro']
 
 
 
