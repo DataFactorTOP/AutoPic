@@ -61,5 +61,15 @@ print(sentence, r[0])
 
 #>> La partita di ieri è stata bruttissima. I giocatori non si reggevano in piedi [0.4756906032562256, 'Altro']
 
+#You can also improve the perfomance of the model changing is default architecture and training params 
+topic_model = autopic.train_nn('twitter_data.csv', vector_size = 16, window = 8, min = 3, epochs = 20)
+
+#Example 4: Improved model, default thresolds
+sentence = "La partita di ieri è stata bruttissima. I giocatori non si reggevano in piedi"
+r = autopic.get_topic(sentence, topics_names, topic_model)
+print(sentence, r[0])
+
+#>> La partita di ieri è stata bruttissima. I giocatori non si reggevano in piedi [0.8334265798330307, 'Altro']
+
 
 
