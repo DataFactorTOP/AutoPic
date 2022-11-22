@@ -3,13 +3,13 @@ import autopic
 #Please note stop words are automatically imported, you can use your own stopwords 
 #by simply changing stopwords.py according your needs
 
-#before are we need to trian a neural netowrks model using FastText method.
+#before all are we need to trian a neural networks model using FastText method.
 # We can begin by calling the train function 
 
-##########model = autopic.train_nn('twitter_data.csv')
+model = autopic.train_nn('twitter_data.csv')
 
 #Once trained we can save it for later use
-############autopic.save_model(model)
+autopic.save_model(model)
 
 #to load a model use:
 topic_model = autopic.load_model()
