@@ -14,7 +14,7 @@ autopic.save_model(model)
 #to load a model use:
 topic_model = autopic.load_model()
 
-#Now we are rasy to use our model to classify topics
+#Now we are ready to use our model to classify topics
 #Here we use the embeddings as a parameter to identify predefined topics, so we will need to define some topics
 #according this structure:
 
